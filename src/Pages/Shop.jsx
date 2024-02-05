@@ -1,6 +1,7 @@
+import Slider from "../Components/Slider";
 const Shop=()=>{
     return(
-        <h1 className="text-red-300">this is shop</h1>
+      <Slider/>  
     )
 }
 export default Shop;
