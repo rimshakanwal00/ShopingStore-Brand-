@@ -1,7 +1,12 @@
 import Slider from "../Components/Slider";
+import ProductCard from "../Components/Products/Productcard";
 const Shop=()=>{
     return(
-      <Slider/>  
+        <div>
+           <Slider/>
+           <ProductCard/>
+        </div>
+      
     )
 }
 export default Shop;

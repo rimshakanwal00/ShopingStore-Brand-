@@ -1,6 +1,8 @@
+import  ShoppingCarts from "../Components/ShopingCart/shppingCarts";
 const Cart=()=>{
     return(
-        <h1>this is shop</h1>
+        <div><ShoppingCarts/></div>
+        
     )
 }
 export default Cart;
