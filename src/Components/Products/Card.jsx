@@ -11,7 +11,7 @@ const Card=(props)=>{
             <div className="text-center ">
             <h1>{props.Name}</h1>
             <h1 className="mb-3">{props.Price}</h1>
-            <Link  className="bg-green-700 p-1 rounded-xl  text-sm" onClick={()=>Addtocart(props.id)} >Add to Cart</Link>
+            <Link to="./Cart" className="bg-green-700 p-1 rounded-xl  text-sm" onClick={()=>Addtocart(props.id)} >Add to Cart</Link>
             </div>
             
         </Link>

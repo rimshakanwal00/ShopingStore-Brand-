@@ -5,7 +5,7 @@ import { useState } from "react";
 export const ShopContext=createContext(null);
 const defaultitem=()=>{
     const cart={};
-    for(let i=1; i<Data.length;i++){
+    for(let i=1; i<=Data.length;i++){
         cart[i]=0;
     }
     return cart;
@@ -26,8 +26,23 @@ const ShopContextProvider=(props)=>{
        )
        )
    }
+
+  const SubTotal=()=>{
+    let Totalamount=0;
+    for (let item in cartvalue){
+      if(cartvalue[item]>0){
+        let info=Data.find((pro)=>pro.id=== Number(item)) ;
+         Totalamount +=info.price* cartvalue[item] 
+      }
+
+    }
+    
+    return Totalamount;
+  }
  
-    const contextval={cartvalue,Addtocart,Removetocart}
+
+ 
+    const contextval={cartvalue,Addtocart,Removetocart,SubTotal}
 return  <ShopContext.Provider value={contextval}> {props.children}</ShopContext.Provider>
 }
 export default ShopContextProvider;
